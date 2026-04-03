@@ -1,0 +1,56 @@
+# 你的站点域名，必须带https://
+baseURL = "https://imengyu.space/"
+# 站点名称，就是你要的Mengyu Notes
+title = "Mengyu Notes"
+# 语言设置为中文
+languageCode = "zh-CN"
+# 默认主题
+theme = "PaperMod"
+# 开启大小写不敏感的URL，避免链接错误
+disablePathToLower = false
+# 开启代码高亮
+highlight = true
+
+# 主题参数配置
+[params]
+  # 站点描述，会显示在搜索引擎结果里
+  description = "Mengyu的个人笔记站点，记录技术与生活"
+  # 默认主题：auto表示自动跟随系统切换深色/浅色模式
+  defaultTheme = "auto"
+  # 显示代码复制按钮
+  ShowCodeCopyButtons = true
+  # 显示阅读时间
+  ShowReadingTime = true
+  # 显示分享按钮
+  ShowShareButtons = true
+  # 显示面包屑导航
+  ShowBreadCrumbs = true
+  # 开启搜索功能
+  enableSearch = true
+
+# 顶部导航菜单配置
+[menu]
+  [[menu.main]]
+    name = "首页"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "归档"
+    url = "/archives/"
+    weight = 2
+  [[menu.main]]
+    name = "标签"
+    url = "/tags/"
+    weight = 3
+  [[menu.main]]
+    name = "分类"
+    url = "/categories/"
+    weight = 4
+  [[menu.main]]
+    name = "搜索"
+    url = "/search/"
+    weight = 5
+
+# 开启搜索功能的输出配置
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
