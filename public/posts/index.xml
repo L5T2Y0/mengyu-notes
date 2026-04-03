@@ -6,8 +6,30 @@
     <description>Recent content in Posts on Mengyu Notes</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 03 Apr 2026 15:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 03 Apr 2026 18:00:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>开源项目分享：Daily HN Archives - 自动归档 Hacker News 热门文章</title>
+      <link>http://localhost:1313/posts/daily-hn-archives/</link>
+      <pubDate>Fri, 03 Apr 2026 18:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/daily-hn-archives/</guid>
+      <description>&lt;h2 id=&#34;项目简介&#34;&gt;项目简介&lt;/h2&gt;
+&lt;p&gt;最近开源了一个自动化项目 &lt;a href=&#34;https://github.com/L5T2Y0/daily-hn-archives&#34;&gt;Daily HN Archives&lt;/a&gt;，它能每天自动获取 Hacker News 的热门文章并归档保存。&lt;/p&gt;
+&lt;p&gt;这个项目基于 GitHub Actions 实现全自动运行，无需服务器，完全免费。每天 UTC 0点自动执行，获取当天的 Top 10 热门文章，并以 Markdown 格式保存到仓库中。&lt;/p&gt;
+&lt;h2 id=&#34;核心功能&#34;&gt;核心功能&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;每日归档&lt;/strong&gt; - 自动获取并保存 Hacker News Top 10 文章&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;周报汇总&lt;/strong&gt; - 每周日生成 Top 20 热门文章周报&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;月报精选&lt;/strong&gt; - 每月1号生成 Top 50 热门文章月报&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;智能分类&lt;/strong&gt; - 自动识别文章类别（AI、Web、DevOps 等 12+ 标签）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;动态索引&lt;/strong&gt; - README 自动更新，历史记录一目了然&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;技术亮点&#34;&gt;技术亮点&lt;/h2&gt;
+&lt;h3 id=&#34;1-全自动化流程&#34;&gt;1. 全自动化流程&lt;/h3&gt;
+&lt;p&gt;使用 GitHub Actions 实现完全自动化：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;每天 UTC 0点 → 获取 HN Top 10 → 生成归档文件 → 更新 README → 自动提交&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;无需人工干预，失败自动重试，确保数据不丢失。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>你好，Mengyu Notes！</title>
       <link>http://localhost:1313/posts/hello-world/</link>

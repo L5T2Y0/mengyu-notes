@@ -5,11 +5,26 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>你好，Mengyu Notes！ | Mengyu Notes</title>
-<meta name="keywords" content="日常, 测试">
-<meta name="description" content="欢迎来到我的个人笔记站点！这是我用Hugo&#43;PaperMod搭建的博客，部署在Cloudflare上，速度飞快~">
+<title>开源项目分享：Daily HN Archives - 自动归档 Hacker News 热门文章 | Mengyu Notes</title>
+<meta name="keywords" content="开源项目, Python, GitHub Actions, 自动化">
+<meta name="description" content="项目简介
+最近开源了一个自动化项目 Daily HN Archives，它能每天自动获取 Hacker News 的热门文章并归档保存。
+这个项目基于 GitHub Actions 实现全自动运行，无需服务器，完全免费。每天 UTC 0点自动执行，获取当天的 Top 10 热门文章，并以 Markdown 格式保存到仓库中。
+核心功能
+
+每日归档 - 自动获取并保存 Hacker News Top 10 文章
+周报汇总 - 每周日生成 Top 20 热门文章周报
+月报精选 - 每月1号生成 Top 50 热门文章月报
+智能分类 - 自动识别文章类别（AI、Web、DevOps 等 12&#43; 标签）
+动态索引 - README 自动更新，历史记录一目了然
+
+技术亮点
+1. 全自动化流程
+使用 GitHub Actions 实现完全自动化：
+每天 UTC 0点 → 获取 HN Top 10 → 生成归档文件 → 更新 README → 自动提交
+无需人工干预，失败自动重试，确保数据不丢失。">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/hello-world/">
+<link rel="canonical" href="http://localhost:1313/posts/daily-hn-archives/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.0c557424033a6b3cff40471b4e9b3702a6f256e58acbb4e0c17d3d526d943105.css" integrity="sha256-DFV0JAM6azz/QEcbTps3AqbyVuWKy7TgwX09Um2UMQU=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
@@ -18,7 +33,7 @@
 <link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/hello-world/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/daily-hn-archives/">
 <noscript>
     <style>
         #theme-toggle,
@@ -140,21 +155,113 @@
   <header class="post-header">
     <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
-      你好，Mengyu Notes！
+      开源项目分享：Daily HN Archives - 自动归档 Hacker News 热门文章
     </h1>
-    <div class="post-meta"><span title='2026-04-03 15:00:00 +0800 CST'>April 3, 2026</span>&nbsp;·&nbsp;<span>1 min</span>
+    <div class="post-meta"><span title='2026-04-03 18:00:00 +0800 CST'>April 3, 2026</span>&nbsp;·&nbsp;<span>2 min</span>
 
 </div>
   </header> 
-  <div class="post-content"><p>欢迎来到我的个人笔记站点！这是我用Hugo+PaperMod搭建的博客，部署在Cloudflare上，速度飞快~</p>
+  <div class="post-content"><h2 id="项目简介">项目简介<a hidden class="anchor" aria-hidden="true" href="#项目简介">#</a></h2>
+<p>最近开源了一个自动化项目 <a href="https://github.com/L5T2Y0/daily-hn-archives">Daily HN Archives</a>，它能每天自动获取 Hacker News 的热门文章并归档保存。</p>
+<p>这个项目基于 GitHub Actions 实现全自动运行，无需服务器，完全免费。每天 UTC 0点自动执行，获取当天的 Top 10 热门文章，并以 Markdown 格式保存到仓库中。</p>
+<h2 id="核心功能">核心功能<a hidden class="anchor" aria-hidden="true" href="#核心功能">#</a></h2>
+<ul>
+<li><strong>每日归档</strong> - 自动获取并保存 Hacker News Top 10 文章</li>
+<li><strong>周报汇总</strong> - 每周日生成 Top 20 热门文章周报</li>
+<li><strong>月报精选</strong> - 每月1号生成 Top 50 热门文章月报</li>
+<li><strong>智能分类</strong> - 自动识别文章类别（AI、Web、DevOps 等 12+ 标签）</li>
+<li><strong>动态索引</strong> - README 自动更新，历史记录一目了然</li>
+</ul>
+<h2 id="技术亮点">技术亮点<a hidden class="anchor" aria-hidden="true" href="#技术亮点">#</a></h2>
+<h3 id="1-全自动化流程">1. 全自动化流程<a hidden class="anchor" aria-hidden="true" href="#1-全自动化流程">#</a></h3>
+<p>使用 GitHub Actions 实现完全自动化：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ae81ff">每天 UTC 0点 → 获取 HN Top 10 → 生成归档文件 → 更新 README → 自动提交</span>
+</span></span></code></pre></div><p>无需人工干预，失败自动重试，确保数据不丢失。</p>
+<h3 id="2-企业级代码质量">2. 企业级代码质量<a hidden class="anchor" aria-hidden="true" href="#2-企业级代码质量">#</a></h3>
+<ul>
+<li><strong>自定义异常处理</strong> - 完善的错误恢复机制</li>
+<li><strong>指数退避重试</strong> - 网络请求失败自动重试（最多3次）</li>
+<li><strong>完整测试覆盖</strong> - 22个单元测试用例全部通过</li>
+<li><strong>代码规范</strong> - 使用 black、flake8、mypy 保证代码质量</li>
+</ul>
+<h3 id="3-模块化设计">3. 模块化设计<a hidden class="anchor" aria-hidden="true" href="#3-模块化设计">#</a></h3>
+<p>项目采用清晰的模块化架构：</p>
+<ul>
+<li><code>hn_fetcher.py</code> - 与 Hacker News API 交互</li>
+<li><code>markdown_generator.py</code> - 生成 Markdown 内容</li>
+<li><code>file_manager.py</code> - 文件系统操作</li>
+<li><code>weekly_summary.py</code> - 生成周报</li>
+<li><code>monthly_summary.py</code> - 生成月报</li>
+<li><code>tag_classifier.py</code> - 文章智能分类</li>
+</ul>
+<h2 id="使用方法">使用方法<a hidden class="anchor" aria-hidden="true" href="#使用方法">#</a></h2>
+<h3 id="方式一fork-自动运行推荐">方式一：Fork 自动运行（推荐）<a hidden class="anchor" aria-hidden="true" href="#方式一fork-自动运行推荐">#</a></h3>
+<ol>
+<li>Fork 本仓库</li>
+<li>启用 GitHub Actions</li>
+<li>等待每天自动运行</li>
+</ol>
+<p>就这么简单！</p>
+<h3 id="方式二本地运行">方式二：本地运行<a hidden class="anchor" aria-hidden="true" href="#方式二本地运行">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 克隆仓库</span>
+</span></span><span style="display:flex;"><span>git clone https://github.com/L5T2Y0/daily-hn-archives.git
+</span></span><span style="display:flex;"><span>cd daily-hn-archives
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 安装依赖</span>
+</span></span><span style="display:flex;"><span>pip install -r requirements.txt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 运行脚本</span>
+</span></span><span style="display:flex;"><span>python main.py
+</span></span></code></pre></div><h2 id="技术栈">技术栈<a hidden class="anchor" aria-hidden="true" href="#技术栈">#</a></h2>
+<ul>
+<li><strong>Python 3.12</strong> - 核心开发语言</li>
+<li><strong>requests</strong> - HTTP 请求库</li>
+<li><strong>GitHub Actions</strong> - CI/CD 自动化</li>
+<li><strong>Hacker News API</strong> - 数据来源</li>
+</ul>
+<p>开发工具：</p>
+<ul>
+<li>pytest - 单元测试</li>
+<li>black - 代码格式化</li>
+<li>flake8 - 静态检查</li>
+<li>mypy - 类型检查</li>
+</ul>
+<h2 id="项目收获">项目收获<a hidden class="anchor" aria-hidden="true" href="#项目收获">#</a></h2>
+<p>通过这个项目，我学到了：</p>
+<ol>
+<li><strong>GitHub Actions 实战</strong> - 从零搭建完整的 CI/CD 流程</li>
+<li><strong>Python 最佳实践</strong> - 异常处理、类型注解、模块化设计</li>
+<li><strong>API 交互技巧</strong> - 重试机制、超时处理、错误恢复</li>
+<li><strong>开源项目管理</strong> - README 编写、文档维护、版本控制</li>
+</ol>
+<h2 id="未来计划">未来计划<a hidden class="anchor" aria-hidden="true" href="#未来计划">#</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"> 添加更多数据源（Reddit、Product Hunt 等）</li>
+<li><input disabled="" type="checkbox"> 支持自定义归档规则</li>
+<li><input disabled="" type="checkbox"> 生成数据可视化图表</li>
+<li><input disabled="" type="checkbox"> 提供 RSS 订阅功能</li>
+</ul>
+<h2 id="开源地址">开源地址<a hidden class="anchor" aria-hidden="true" href="#开源地址">#</a></h2>
+<p>项目地址：<a href="https://github.com/L5T2Y0/daily-hn-archives">https://github.com/L5T2Y0/daily-hn-archives</a></p>
+<p>如果觉得有用，欢迎 Star ⭐ 支持一下！</p>
+<h2 id="总结">总结<a hidden class="anchor" aria-hidden="true" href="#总结">#</a></h2>
+<p>这是一个简单但实用的自动化项目，适合：</p>
+<ul>
+<li>想了解 GitHub Actions 的开发者</li>
+<li>需要追踪科技趋势的技术爱好者</li>
+<li>学习 Python 爬虫和 API 调用的初学者</li>
+</ul>
+<p>代码完全开源，欢迎 Fork 和贡献！</p>
 
 
   </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/%E6%97%A5%E5%B8%B8/">日常</a></li>
-      <li><a href="http://localhost:1313/tags/%E6%B5%8B%E8%AF%95/">测试</a></li>
+      <li><a href="http://localhost:1313/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/">开源项目</a></li>
+      <li><a href="http://localhost:1313/tags/python/">Python</a></li>
+      <li><a href="http://localhost:1313/tags/github-actions/">GitHub Actions</a></li>
+      <li><a href="http://localhost:1313/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/">自动化</a></li>
     </ul>
   </footer>
 </article>

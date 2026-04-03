@@ -1,0 +1,32 @@
+/* 调整首页简介区域，让它更紧凑 */
+.first-entry {
+    padding: 30px !important;  /* 减小简介卡片的内边距 */
+    margin-bottom: 30px !important;  /* 减小与文章列表的间距 */
+}
+
+/* 调整首页简介的标题 */
+.first-entry .entry-header h1 {
+    font-size: 1.5rem !important;
+    margin-bottom: 12px !important;
+}
+
+/* 调整首页简介的内容 */
+.first-entry .entry-content {
+    margin-top: 12px !important;
+    line-height: 1.6 !important;
+}
+
+/* 调整首页简介的头像 */
+.first-entry img {
+    margin-bottom: 16px !important;
+}
+
+/* 减小页面顶部的空白 */
+.main {
+    padding-top: 30px !important;
+}
+
+/* 调整文章列表项的间距 */
+.post-entry {
+    margin-bottom: 20px !important;
+}

@@ -11,7 +11,7 @@ disablePathToLower = false
 # 开启代码高亮
 highlight = true
 
-# 主题参数配置
+# 主题基础参数配置
 [params]
   # 站点描述，会显示在搜索引擎结果里
   description = "Mengyu的个人笔记站点，记录技术与生活"
@@ -21,12 +21,35 @@ highlight = true
   ShowCodeCopyButtons = true
   # 显示阅读时间
   ShowReadingTime = true
-  # 显示分享按钮
-  ShowShareButtons = true
+  # 关闭分享按钮
+  ShowShareButtons = false
   # 显示面包屑导航
   ShowBreadCrumbs = true
   # 开启搜索功能
   enableSearch = true
+
+# 网站图标配置
+[params.assets]
+  favicon = "/favicon.ico"
+
+# --------------- 首页个人简介+头像配置---------------
+# 首页简短介绍
+[params.homeInfoParams]
+Title = "欢迎来到 Mengyu Notes"
+imageUrl = "/assets/avatar.jpg"
+imageTitle = "Mengyu"
+imageWidth = 120
+imageHeight = 120
+Content = """
+这里记录我的技术学习和生活日常
+
+[关于我 →](/about/)
+"""
+
+# 社交链接配置
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/L5T2Y0"
 
 # 顶部导航菜单配置
 [menu]
@@ -50,7 +73,17 @@ highlight = true
     name = "搜索"
     url = "/search/"
     weight = 5
+  [[menu.main]]
+    name = "关于"
+    url = "/about/"
+    weight = 6
 
 # 开启搜索功能的输出配置
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+
+# 允许在 Markdown 中使用 HTML
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

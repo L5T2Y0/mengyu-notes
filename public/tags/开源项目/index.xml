@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Mengyu Notes</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Mengyu Notes</description>
+    <title>开源项目 on Mengyu Notes</title>
+    <link>http://localhost:1313/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</link>
+    <description>Recent content in 开源项目 on Mengyu Notes</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <lastBuildDate>Fri, 03 Apr 2026 18:00:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>开源项目分享：Daily HN Archives - 自动归档 Hacker News 热门文章</title>
       <link>http://localhost:1313/posts/daily-hn-archives/</link>
@@ -29,37 +29,6 @@
 &lt;p&gt;使用 GitHub Actions 实现完全自动化：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;每天 UTC 0点 → 获取 HN Top 10 → 生成归档文件 → 更新 README → 自动提交&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;无需人工干预，失败自动重试，确保数据不丢失。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>你好，Mengyu Notes！</title>
-      <link>http://localhost:1313/posts/hello-world/</link>
-      <pubDate>Fri, 03 Apr 2026 15:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/posts/hello-world/</guid>
-      <description>&lt;p&gt;欢迎来到我的个人笔记站点！这是我用Hugo+PaperMod搭建的博客，部署在Cloudflare上，速度飞快~&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>关于</title>
-      <link>http://localhost:1313/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
-      <description>&lt;div style=&#34;text-align: center; margin: 30px 0;&#34;&gt;
-  &lt;img src=&#34;http://localhost:1313/assets/avatar.jpg&#34; alt=&#34;Mengyu&#34; style=&#34;width: 150px; height: 150px; border-radius: 50%; margin-bottom: 20px;&#34;&gt;
-&lt;/div&gt;
-&lt;h2 id=&#34;hi-我是-mengyu-&#34;&gt;Hi, 我是 Mengyu 👋&lt;/h2&gt;
-&lt;p&gt;你好，我是Mengyu，一个热爱技术的开发者，这里记录我的学习笔记和日常~&lt;/p&gt;
-&lt;p&gt;欢迎来到我的个人博客！&lt;/p&gt;
-&lt;h3 id=&#34;关于本站&#34;&gt;关于本站&lt;/h3&gt;
-&lt;p&gt;这是我用 Hugo + PaperMod 搭建的个人博客，部署在 Cloudflare 上。&lt;/p&gt;
-&lt;p&gt;在这里我会分享：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;技术学习笔记&lt;/li&gt;
-&lt;li&gt;开发经验总结&lt;/li&gt;
-&lt;li&gt;日常生活记录&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;联系方式&#34;&gt;联系方式&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;GitHub: &lt;a href=&#34;https://github.com/L5T2Y0&#34;&gt;L5T2Y0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
     </item>
   </channel>
 </rss>
