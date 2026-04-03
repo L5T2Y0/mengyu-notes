@@ -4,6 +4,8 @@ draft: false
 searchHidden: true
 hideMeta: true
 ShowBreadCrumbs: false
+ShowToc: false
+comments: false
 ---
 
 <div style="text-align: center; margin: 30px 0;">

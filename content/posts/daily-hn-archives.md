@@ -9,6 +9,7 @@ tags:
   - 自动化
 categories:
   - 技术分享
+comments: true
 ---
 
 ## 项目简介

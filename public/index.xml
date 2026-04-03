@@ -6,8 +6,59 @@
     <description>Recent content on Mengyu Notes</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 03 Apr 2026 18:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 03 Apr 2026 19:00:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>全栈项目实战：在线考试系统 - SpringBoot &#43; Vue 开发</title>
+      <link>http://localhost:1313/posts/online-exam-system/</link>
+      <pubDate>Fri, 03 Apr 2026 19:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/online-exam-system/</guid>
+      <description>&lt;h2 id=&#34;项目简介&#34;&gt;项目简介&lt;/h2&gt;
+&lt;p&gt;分享一个最近完成的全栈项目 - &lt;a href=&#34;https://github.com/L5T2Y0/online-student-exam-system&#34;&gt;在线学生考试系统&lt;/a&gt;。这是一个功能完整、安全可靠的在线考试平台，采用前后端分离架构，支持学生、教师、管理员三种角色。&lt;/p&gt;
+&lt;p&gt;项目最大的特点是&lt;strong&gt;开箱即用&lt;/strong&gt;，内置了 27 道测试题目、5 份试卷、23 个测试账号，克隆下来就能直接运行体验！&lt;/p&gt;
+&lt;h2 id=&#34;核心功能&#34;&gt;核心功能&lt;/h2&gt;
+&lt;h3 id=&#34;三种角色各司其职&#34;&gt;三种角色，各司其职&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;学生端：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用户注册登录&lt;/li&gt;
+&lt;li&gt;在线考试（倒计时、防作弊）&lt;/li&gt;
+&lt;li&gt;成绩查询&lt;/li&gt;
+&lt;li&gt;错题回顾&lt;/li&gt;
+&lt;li&gt;个人中心&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;教师端：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;题库管理（增删改查）&lt;/li&gt;
+&lt;li&gt;试卷管理（手动/自动组卷）&lt;/li&gt;
+&lt;li&gt;批阅主观题&lt;/li&gt;
+&lt;li&gt;成绩统计与导出&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;管理员端：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用户管理（批量导入/导出）&lt;/li&gt;
+&lt;li&gt;系统权限控制&lt;/li&gt;
+&lt;li&gt;全局数据概览&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;技术栈&#34;&gt;技术栈&lt;/h2&gt;
+&lt;h3 id=&#34;前端技术&#34;&gt;前端技术&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;React 18.2&lt;/strong&gt; - 现代化的前端框架&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ant Design 5.10&lt;/strong&gt; - 企业级 UI 组件库&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;React Router 6&lt;/strong&gt; - 路由管理&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Axios&lt;/strong&gt; - HTTP 请求&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Day.js&lt;/strong&gt; - 时间处理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;后端技术&#34;&gt;后端技术&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Node.js&lt;/strong&gt; - 运行环境（推荐 v18+）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Express 4.18&lt;/strong&gt; - Web 框架&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sequelize 6.32&lt;/strong&gt; - ORM 框架&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MySQL&lt;/strong&gt; - 关系型数据库&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;JWT&lt;/strong&gt; - 身份认证&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;安全特性&#34;&gt;安全特性&lt;/h2&gt;
+&lt;p&gt;作为一个考试系统，安全性至关重要。项目实现了多层安全防护：&lt;/p&gt;</description>
+    </item>
     <item>
       <title>开源项目分享：Daily HN Archives - 自动归档 Hacker News 热门文章</title>
       <link>http://localhost:1313/posts/daily-hn-archives/</link>

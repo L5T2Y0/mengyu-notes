@@ -4,6 +4,7 @@ baseURL = "https://imengyu.space/"
 title = "Mengyu Notes"
 # 语言设置为中文
 languageCode = "zh-CN"
+defaultContentLanguage = "zh"
 # 默认主题
 theme = "PaperMod"
 # 开启大小写不敏感的URL，避免链接错误
@@ -27,6 +28,38 @@ highlight = true
   ShowBreadCrumbs = true
   # 开启搜索功能
   enableSearch = true
+  
+  # 文章目录配置
+  ShowToc = true
+  TocOpen = true
+  
+  # 显示字数统计
+  ShowWordCount = true
+  # 显示文章更新日期
+  ShowLastMod = true
+  
+  # 显示返回顶部按钮
+  ShowScrollToTop = true
+  
+  # 搜索配置
+  searchPlaceholder = "搜索文章..."
+  
+  # 默认开启评论
+  comments = true
+
+# giscus 评论系统配置
+[params.giscus]
+  repo = "L5T2Y0/mengyu-notes"
+  repoID = "R_kgDOR4qOvg"
+  category = "Announcements"
+  categoryID = "DIC_kwDOR4qOvs4C58U6"
+  mapping = "pathname"
+  strict = "0"
+  reactionsEnabled = "1"
+  emitMetadata = "0"
+  inputPosition = "bottom"
+  theme = "preferred_color_scheme"
+  lang = "zh-CN"
 
 # 网站图标配置
 [params.assets]
