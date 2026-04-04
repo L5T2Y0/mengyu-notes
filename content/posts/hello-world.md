@@ -8,6 +8,7 @@ tags:
 categories:
   - 随笔
 comments: true
+hideCopyright: true
 ---
 
 欢迎来到我的个人笔记站点！这是我用Hugo+PaperMod搭建的博客，部署在Cloudflare上，速度飞快~

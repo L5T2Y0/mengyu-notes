@@ -6,6 +6,7 @@ hideMeta: true
 ShowBreadCrumbs: false
 ShowToc: false
 comments: false
+hideCopyright: true
 ---
 
 <div style="text-align: center; margin: 30px 0;">
