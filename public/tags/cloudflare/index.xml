@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Cloudflare on Mengyu Notes</title>
+    <link>http://localhost:1313/tags/cloudflare/</link>
+    <description>Recent content in Cloudflare on Mengyu Notes</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 04 Apr 2026 10:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/cloudflare/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>为什么选择 Cloudflare？免费、快速、强大的网站加速方案</title>
+      <link>http://localhost:1313/posts/why-choose-cloudflare/</link>
+      <pubDate>Sat, 04 Apr 2026 10:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/why-choose-cloudflare/</guid>
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;作为一个开发者，我一直在寻找既免费又好用的网站托管和加速方案。在尝试了多个平台后，Cloudflare 成为了我的首选。这篇文章分享一下我使用 Cloudflare 的经验和感受。&lt;/p&gt;
+&lt;h2 id=&#34;什么是-cloudflare&#34;&gt;什么是 Cloudflare？&lt;/h2&gt;
+&lt;p&gt;Cloudflare 是全球领先的 CDN（内容分发网络）和网络安全服务提供商。简单来说，它可以：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🚀 加速你的网站访问速度&lt;/li&gt;
+&lt;li&gt;🛡️ 保护网站免受攻击&lt;/li&gt;
+&lt;li&gt;🌍 提供全球 CDN 节点&lt;/li&gt;
+&lt;li&gt;📊 提供详细的流量分析&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最重要的是：&lt;strong&gt;核心功能完全免费！&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;为什么选择-cloudflare&#34;&gt;为什么选择 Cloudflare？&lt;/h2&gt;
+&lt;h3 id=&#34;1-完全免费的核心功能&#34;&gt;1. 完全免费的核心功能&lt;/h3&gt;
+&lt;p&gt;Cloudflare 的免费套餐包含：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ 无限流量的 CDN 加速&lt;/li&gt;
+&lt;li&gt;✅ 免费 SSL 证书（自动续期）&lt;/li&gt;
+&lt;li&gt;✅ DDoS 攻击防护&lt;/li&gt;
+&lt;li&gt;✅ DNS 解析服务&lt;/li&gt;
+&lt;li&gt;✅ 页面缓存规则&lt;/li&gt;
+&lt;li&gt;✅ 基础的 WAF（Web 应用防火墙）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;对于个人博客和小型项目来说，免费套餐完全够用！&lt;/p&gt;
+&lt;h3 id=&#34;2-全球-cdn-加速&#34;&gt;2. 全球 CDN 加速&lt;/h3&gt;
+&lt;p&gt;Cloudflare 在全球拥有 300+ 个数据中心，覆盖：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🌏 亚洲：香港、东京、新加坡、首尔&lt;/li&gt;
+&lt;li&gt;🌍 欧洲：伦敦、法兰克福、巴黎、阿姆斯特丹&lt;/li&gt;
+&lt;li&gt;🌎 美洲：纽约、洛杉矶、圣保罗、多伦多&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;无论访客在哪里，都能获得快速的访问体验。&lt;/p&gt;
+&lt;h3 id=&#34;3-一键启用-https&#34;&gt;3. 一键启用 HTTPS&lt;/h3&gt;
+&lt;p&gt;过去配置 SSL 证书是个麻烦事，现在只需：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;将域名接入 Cloudflare&lt;/li&gt;
+&lt;li&gt;点击&amp;quot;SSL/TLS&amp;quot;设置&lt;/li&gt;
+&lt;li&gt;选择&amp;quot;完全&amp;quot;或&amp;quot;完全（严格）&amp;ldquo;模式&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;就这么简单！证书自动申请、自动续期，完全不用操心。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

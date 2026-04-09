@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>为什么选择 Cloudflare？免费、快速、强大的网站加速方案 | Mengyu Notes</title>
+<meta name="keywords" content="Cloudflare, CDN, 网站部署, 性能优化">
+<meta name="description" content="前言
+作为一个开发者，我一直在寻找既免费又好用的网站托管和加速方案。在尝试了多个平台后，Cloudflare 成为了我的首选。这篇文章分享一下我使用 Cloudflare 的经验和感受。
+什么是 Cloudflare？
+Cloudflare 是全球领先的 CDN（内容分发网络）和网络安全服务提供商。简单来说，它可以：
+
+🚀 加速你的网站访问速度
+🛡️ 保护网站免受攻击
+🌍 提供全球 CDN 节点
+📊 提供详细的流量分析
+
+最重要的是：核心功能完全免费！
+为什么选择 Cloudflare？
+1. 完全免费的核心功能
+Cloudflare 的免费套餐包含：
+
+✅ 无限流量的 CDN 加速
+✅ 免费 SSL 证书（自动续期）
+✅ DDoS 攻击防护
+✅ DNS 解析服务
+✅ 页面缓存规则
+✅ 基础的 WAF（Web 应用防火墙）
+
+对于个人博客和小型项目来说，免费套餐完全够用！
+2. 全球 CDN 加速
+Cloudflare 在全球拥有 300&#43; 个数据中心，覆盖：
+
+🌏 亚洲：香港、东京、新加坡、首尔
+🌍 欧洲：伦敦、法兰克福、巴黎、阿姆斯特丹
+🌎 美洲：纽约、洛杉矶、圣保罗、多伦多
+
+无论访客在哪里，都能获得快速的访问体验。
+3. 一键启用 HTTPS
+过去配置 SSL 证书是个麻烦事，现在只需：
+
+将域名接入 Cloudflare
+点击&quot;SSL/TLS&quot;设置
+选择&quot;完全&quot;或&quot;完全（严格）&ldquo;模式
+
+就这么简单！证书自动申请、自动续期，完全不用操心。">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/why-choose-cloudflare/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.0c557424033a6b3cff40471b4e9b3702a6f256e58acbb4e0c17d3d526d943105.css" integrity="sha256-DFV0JAM6azz/QEcbTps3AqbyVuWKy7TgwX09Um2UMQU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/posts/why-choose-cloudflare/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Mengyu Notes (Alt + H)">Mengyu Notes</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories/" title="分类">
+                    <span>分类</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="搜索">
+                    <span>搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">主页</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title">
+      为什么选择 Cloudflare？免费、快速、强大的网站加速方案
+    </h1>
+    <div class="post-meta"><span title='2026-04-04 10:00:00 +0800 CST'>2026年4月4日</span>&nbsp;·&nbsp;<span>2 分钟</span>&nbsp;·&nbsp;<span>282 字</span>
+
+</div>
+  </header> <div class="toc">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">目录</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%e5%89%8d%e8%a8%80" aria-label="前言">前言</a></li>
+                <li>
+                    <a href="#%e4%bb%80%e4%b9%88%e6%98%af-cloudflare" aria-label="什么是 Cloudflare？">什么是 Cloudflare？</a></li>
+                <li>
+                    <a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e9%80%89%e6%8b%a9-cloudflare" aria-label="为什么选择 Cloudflare？">为什么选择 Cloudflare？</a><ul>
+                        
+                <li>
+                    <a href="#1-%e5%ae%8c%e5%85%a8%e5%85%8d%e8%b4%b9%e7%9a%84%e6%a0%b8%e5%bf%83%e5%8a%9f%e8%83%bd" aria-label="1. 完全免费的核心功能">1. 完全免费的核心功能</a></li>
+                <li>
+                    <a href="#2-%e5%85%a8%e7%90%83-cdn-%e5%8a%a0%e9%80%9f" aria-label="2. 全球 CDN 加速">2. 全球 CDN 加速</a></li>
+                <li>
+                    <a href="#3-%e4%b8%80%e9%94%ae%e5%90%af%e7%94%a8-https" aria-label="3. 一键启用 HTTPS">3. 一键启用 HTTPS</a></li>
+                <li>
+                    <a href="#4-%e5%bc%ba%e5%a4%a7%e7%9a%84%e5%ae%89%e5%85%a8%e9%98%b2%e6%8a%a4" aria-label="4. 强大的安全防护">4. 强大的安全防护</a></li>
+                <li>
+                    <a href="#5-cloudflare-pages---%e5%85%8d%e8%b4%b9%e9%9d%99%e6%80%81%e7%bd%91%e7%ab%99%e6%89%98%e7%ae%a1" aria-label="5. Cloudflare Pages - 免费静态网站托管">5. Cloudflare Pages - 免费静态网站托管</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e5%ae%9e%e6%88%98%e9%83%a8%e7%bd%b2-hugo-%e5%8d%9a%e5%ae%a2%e5%88%b0-cloudflare-pages" aria-label="实战：部署 Hugo 博客到 Cloudflare Pages">实战：部署 Hugo 博客到 Cloudflare Pages</a><ul>
+                        
+                <li>
+                    <a href="#%e6%ad%a5%e9%aa%a4-1%e5%87%86%e5%a4%87-github-%e4%bb%93%e5%ba%93" aria-label="步骤 1：准备 GitHub 仓库">步骤 1：准备 GitHub 仓库</a></li>
+                <li>
+                    <a href="#%e6%ad%a5%e9%aa%a4-2%e8%bf%9e%e6%8e%a5-cloudflare-pages" aria-label="步骤 2：连接 Cloudflare Pages">步骤 2：连接 Cloudflare Pages</a></li>
+                <li>
+                    <a href="#%e6%ad%a5%e9%aa%a4-3%e9%85%8d%e7%bd%ae%e6%9e%84%e5%bb%ba%e8%ae%be%e7%bd%ae" aria-label="步骤 3：配置构建设置">步骤 3：配置构建设置</a></li>
+                <li>
+                    <a href="#%e6%ad%a5%e9%aa%a4-4%e9%83%a8%e7%bd%b2" aria-label="步骤 4：部署">步骤 4：部署</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e6%80%a7%e8%83%bd%e5%af%b9%e6%af%94" aria-label="性能对比">性能对比</a></li>
+                <li>
+                    <a href="#%e5%ae%9e%e7%94%a8%e6%8a%80%e5%b7%a7" aria-label="实用技巧">实用技巧</a><ul>
+                        
+                <li>
+                    <a href="#1-%e5%bc%80%e5%90%af-brotli-%e5%8e%8b%e7%bc%a9" aria-label="1. 开启 Brotli 压缩">1. 开启 Brotli 压缩</a></li>
+                <li>
+                    <a href="#2-%e8%ae%be%e7%bd%ae%e7%bc%93%e5%ad%98%e8%a7%84%e5%88%99" aria-label="2. 设置缓存规则">2. 设置缓存规则</a></li>
+                <li>
+                    <a href="#3-%e5%90%af%e7%94%a8-auto-minify" aria-label="3. 启用 Auto Minify">3. 启用 Auto Minify</a></li>
+                <li>
+                    <a href="#4-%e4%bd%bf%e7%94%a8-page-rules" aria-label="4. 使用 Page Rules">4. 使用 Page Rules</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9" aria-label="注意事项">注意事项</a><ul>
+                        
+                <li>
+                    <a href="#1-dns-%e8%a7%a3%e6%9e%90%e6%97%b6%e9%97%b4" aria-label="1. DNS 解析时间">1. DNS 解析时间</a></li>
+                <li>
+                    <a href="#2-%e7%bc%93%e5%ad%98%e6%b8%85%e7%90%86" aria-label="2. 缓存清理">2. 缓存清理</a></li>
+                <li>
+                    <a href="#3-%e5%9b%bd%e5%86%85%e8%ae%bf%e9%97%ae" aria-label="3. 国内访问">3. 国内访问</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e6%80%bb%e7%bb%93" aria-label="总结">总结</a></li>
+                <li>
+                    <a href="#%e7%9b%b8%e5%85%b3%e9%93%be%e6%8e%a5" aria-label="相关链接">相关链接</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h2 id="前言">前言<a hidden class="anchor" aria-hidden="true" href="#前言">#</a></h2>
+<p>作为一个开发者，我一直在寻找既免费又好用的网站托管和加速方案。在尝试了多个平台后，Cloudflare 成为了我的首选。这篇文章分享一下我使用 Cloudflare 的经验和感受。</p>
+<h2 id="什么是-cloudflare">什么是 Cloudflare？<a hidden class="anchor" aria-hidden="true" href="#什么是-cloudflare">#</a></h2>
+<p>Cloudflare 是全球领先的 CDN（内容分发网络）和网络安全服务提供商。简单来说，它可以：</p>
+<ul>
+<li>🚀 加速你的网站访问速度</li>
+<li>🛡️ 保护网站免受攻击</li>
+<li>🌍 提供全球 CDN 节点</li>
+<li>📊 提供详细的流量分析</li>
+</ul>
+<p>最重要的是：<strong>核心功能完全免费！</strong></p>
+<h2 id="为什么选择-cloudflare">为什么选择 Cloudflare？<a hidden class="anchor" aria-hidden="true" href="#为什么选择-cloudflare">#</a></h2>
+<h3 id="1-完全免费的核心功能">1. 完全免费的核心功能<a hidden class="anchor" aria-hidden="true" href="#1-完全免费的核心功能">#</a></h3>
+<p>Cloudflare 的免费套餐包含：</p>
+<ul>
+<li>✅ 无限流量的 CDN 加速</li>
+<li>✅ 免费 SSL 证书（自动续期）</li>
+<li>✅ DDoS 攻击防护</li>
+<li>✅ DNS 解析服务</li>
+<li>✅ 页面缓存规则</li>
+<li>✅ 基础的 WAF（Web 应用防火墙）</li>
+</ul>
+<p>对于个人博客和小型项目来说，免费套餐完全够用！</p>
+<h3 id="2-全球-cdn-加速">2. 全球 CDN 加速<a hidden class="anchor" aria-hidden="true" href="#2-全球-cdn-加速">#</a></h3>
+<p>Cloudflare 在全球拥有 300+ 个数据中心，覆盖：</p>
+<ul>
+<li>🌏 亚洲：香港、东京、新加坡、首尔</li>
+<li>🌍 欧洲：伦敦、法兰克福、巴黎、阿姆斯特丹</li>
+<li>🌎 美洲：纽约、洛杉矶、圣保罗、多伦多</li>
+</ul>
+<p>无论访客在哪里，都能获得快速的访问体验。</p>
+<h3 id="3-一键启用-https">3. 一键启用 HTTPS<a hidden class="anchor" aria-hidden="true" href="#3-一键启用-https">#</a></h3>
+<p>过去配置 SSL 证书是个麻烦事，现在只需：</p>
+<ol>
+<li>将域名接入 Cloudflare</li>
+<li>点击&quot;SSL/TLS&quot;设置</li>
+<li>选择&quot;完全&quot;或&quot;完全（严格）&ldquo;模式</li>
+</ol>
+<p>就这么简单！证书自动申请、自动续期，完全不用操心。</p>
+<h3 id="4-强大的安全防护">4. 强大的安全防护<a hidden class="anchor" aria-hidden="true" href="#4-强大的安全防护">#</a></h3>
+<p>Cloudflare 自动帮你抵御：</p>
+<ul>
+<li>DDoS 攻击</li>
+<li>SQL 注入</li>
+<li>XSS 跨站脚本攻击</li>
+<li>恶意爬虫</li>
+</ul>
+<p>我的博客接入 Cloudflare 后，每天都能看到它拦截的恶意请求，省心又安全。</p>
+<h3 id="5-cloudflare-pages---免费静态网站托管">5. Cloudflare Pages - 免费静态网站托管<a hidden class="anchor" aria-hidden="true" href="#5-cloudflare-pages---免费静态网站托管">#</a></h3>
+<p>除了 CDN，Cloudflare 还提供 Pages 服务，可以免费托管静态网站：</p>
+<ul>
+<li>🚀 自动从 GitHub 部署</li>
+<li>🌐 免费的 <code>.pages.dev</code> 域名</li>
+<li>🔄 支持自定义域名</li>
+<li>⚡ 无限带宽和请求</li>
+<li>🔧 支持 Hugo、Next.js、React 等框架</li>
+</ul>
+<p><strong>我的这个博客就部署在 Cloudflare Pages 上！</strong></p>
+<h2 id="实战部署-hugo-博客到-cloudflare-pages">实战：部署 Hugo 博客到 Cloudflare Pages<a hidden class="anchor" aria-hidden="true" href="#实战部署-hugo-博客到-cloudflare-pages">#</a></h2>
+<h3 id="步骤-1准备-github-仓库">步骤 1：准备 GitHub 仓库<a hidden class="anchor" aria-hidden="true" href="#步骤-1准备-github-仓库">#</a></h3>
+<p>确保你的 Hugo 博客代码已推送到 GitHub。</p>
+<h3 id="步骤-2连接-cloudflare-pages">步骤 2：连接 Cloudflare Pages<a hidden class="anchor" aria-hidden="true" href="#步骤-2连接-cloudflare-pages">#</a></h3>
+<ol>
+<li>登录 <a href="https://dash.cloudflare.com/">Cloudflare Dashboard</a></li>
+<li>进入&quot;Pages&quot;页面</li>
+<li>点击&quot;创建项目&rdquo;</li>
+<li>选择你的 GitHub 仓库</li>
+</ol>
+<h3 id="步骤-3配置构建设置">步骤 3：配置构建设置<a hidden class="anchor" aria-hidden="true" href="#步骤-3配置构建设置">#</a></h3>
+<pre tabindex="0"><code>框架预设：Hugo
+构建命令：hugo --minify
+构建输出目录：public
+环境变量：HUGO_VERSION = 0.159.2
+</code></pre><h3 id="步骤-4部署">步骤 4：部署<a hidden class="anchor" aria-hidden="true" href="#步骤-4部署">#</a></h3>
+<p>点击&quot;保存并部署&quot;，等待几分钟，你的博客就上线了！</p>
+<p>每次推送代码到 GitHub，Cloudflare 会自动重新部署。</p>
+<h2 id="性能对比">性能对比<a hidden class="anchor" aria-hidden="true" href="#性能对比">#</a></h2>
+<p>我之前用过几个托管平台，这是简单的对比：</p>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>国内访问速度</th>
+          <th>免费额度</th>
+          <th>自动部署</th>
+          <th>SSL 证书</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Cloudflare Pages</td>
+          <td>⭐⭐⭐⭐⭐</td>
+          <td>无限</td>
+          <td>✅</td>
+          <td>✅ 自动</td>
+      </tr>
+      <tr>
+          <td>GitHub Pages</td>
+          <td>⭐⭐⭐</td>
+          <td>无限</td>
+          <td>✅</td>
+          <td>✅ 自动</td>
+      </tr>
+      <tr>
+          <td>Vercel</td>
+          <td>⭐⭐⭐⭐</td>
+          <td>100GB/月</td>
+          <td>✅</td>
+          <td>✅ 自动</td>
+      </tr>
+      <tr>
+          <td>Netlify</td>
+          <td>⭐⭐⭐</td>
+          <td>100GB/月</td>
+          <td>✅</td>
+          <td>✅ 自动</td>
+      </tr>
+  </tbody>
+</table>
+<p>Cloudflare Pages 在国内的访问速度明显更快，而且没有流量限制。</p>
+<h2 id="实用技巧">实用技巧<a hidden class="anchor" aria-hidden="true" href="#实用技巧">#</a></h2>
+<h3 id="1-开启-brotli-压缩">1. 开启 Brotli 压缩<a hidden class="anchor" aria-hidden="true" href="#1-开启-brotli-压缩">#</a></h3>
+<p>在&quot;速度&quot; → &ldquo;优化&quot;中开启 Brotli 压缩，可以进一步减小文件大小。</p>
+<h3 id="2-设置缓存规则">2. 设置缓存规则<a hidden class="anchor" aria-hidden="true" href="#2-设置缓存规则">#</a></h3>
+<p>在&quot;缓存&rdquo; → &ldquo;配置&quot;中设置缓存规则：</p>
+<pre tabindex="0"><code>静态资源（图片、CSS、JS）：缓存 1 个月
+HTML 页面：缓存 1 小时
+</code></pre><h3 id="3-启用-auto-minify">3. 启用 Auto Minify<a hidden class="anchor" aria-hidden="true" href="#3-启用-auto-minify">#</a></h3>
+<p>自动压缩 HTML、CSS、JavaScript，减小文件体积。</p>
+<h3 id="4-使用-page-rules">4. 使用 Page Rules<a hidden class="anchor" aria-hidden="true" href="#4-使用-page-rules">#</a></h3>
+<p>免费套餐提供 3 条页面规则，可以用来：</p>
+<ul>
+<li>强制 HTTPS 跳转</li>
+<li>设置特定路径的缓存策略</li>
+<li>禁用某些路径的安全功能</li>
+</ul>
+<h2 id="注意事项">注意事项<a hidden class="anchor" aria-hidden="true" href="#注意事项">#</a></h2>
+<h3 id="1-dns-解析时间">1. DNS 解析时间<a hidden class="anchor" aria-hidden="true" href="#1-dns-解析时间">#</a></h3>
+<p>首次接入 Cloudflare 需要修改域名的 NS 记录，可能需要 24-48 小时生效。</p>
+<h3 id="2-缓存清理">2. 缓存清理<a hidden class="anchor" aria-hidden="true" href="#2-缓存清理">#</a></h3>
+<p>修改网站内容后，记得在 Cloudflare 后台清理缓存，否则访客可能看到旧内容。</p>
+<h3 id="3-国内访问">3. 国内访问<a hidden class="anchor" aria-hidden="true" href="#3-国内访问">#</a></h3>
+<p>虽然 Cloudflare 在国内有节点，但某些地区可能会有访问问题。如果主要面向国内用户，建议配合国内 CDN 使用。</p>
+<h2 id="总结">总结<a hidden class="anchor" aria-hidden="true" href="#总结">#</a></h2>
+<p>Cloudflare 是我用过最好的免费网站加速方案：</p>
+<p>✅ 完全免费，无隐藏费用
+✅ 全球 CDN，访问速度快
+✅ 自动 HTTPS，安全可靠
+✅ 操作简单，新手友好
+✅ 功能强大，满足大部分需求</p>
+<p>如果你有个人博客或小型项目，强烈推荐试试 Cloudflare！</p>
+<h2 id="相关链接">相关链接<a hidden class="anchor" aria-hidden="true" href="#相关链接">#</a></h2>
+<ul>
+<li><a href="https://www.cloudflare.com/">Cloudflare 官网</a></li>
+<li><a href="https://developers.cloudflare.com/pages/">Cloudflare Pages 文档</a></li>
+</ul>
+<hr>
+<p>你在用什么托管方案？欢迎在评论区分享你的经验！</p>
+
+
+  </div>
+<div class="post-copyright" style="margin-top: 40px; padding: 20px; background: var(--code-bg); border-left: 4px solid var(--primary); border-radius: 4px;">
+    <div style="margin-bottom: 10px;">
+        <strong>📄 本文标题：</strong>为什么选择 Cloudflare？免费、快速、强大的网站加速方案
+    </div>
+    <div style="margin-bottom: 10px;">
+        <strong>🔗 本文链接：</strong><a href="http://localhost:1313/posts/why-choose-cloudflare/" style="word-break: break-all;">http://localhost:1313/posts/why-choose-cloudflare/</a>
+    </div>
+    <div style="margin-bottom: 10px;">
+        <strong>✍️ 作者：</strong>Mengyu Notes
+    </div>
+    <div style="margin-bottom: 10px;">
+        <strong>📅 发布时间：</strong>2026-04-04
+    </div>
+    <div style="margin-bottom: 10px;">
+        <strong>🔄 最后更新：</strong>2026-04-04
+    </div>
+    <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid var(--border); color: var(--secondary);">
+        <strong>📝 版权声明：</strong>本文由 Mengyu Notes 原创，采用 
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 
+        许可协议。转载请注明出处！
+    </div>
+</div>
+
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/cloudflare/">Cloudflare</a></li>
+      <li><a href="http://localhost:1313/tags/cdn/">CDN</a></li>
+      <li><a href="http://localhost:1313/tags/%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2/">网站部署</a></li>
+      <li><a href="http://localhost:1313/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">性能优化</a></li>
+    </ul>
+  </footer>
+<div id="giscus-comments" style="margin-top: 40px;">
+  <script src="https://giscus.app/client.js"
+    data-repo="L5T2Y0/mengyu-notes"
+    data-repo-id="R_kgDOR4qOvg"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOR4qOvs4C58U6"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="zh-CN"
+    crossorigin="anonymous"
+    async>
+  </script>
+</div>
+
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">Mengyu Notes</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '复制';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制！';
+            setTimeout(() => {
+                copybutton.innerHTML = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
